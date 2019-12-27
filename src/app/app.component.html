@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title | uppercase}}!
+  </h1>
+</div>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/cardstatus">Card Status</a>
+</nav>
+<div style="display: none;">
+<h1>Date Pipe!</h1>
+<p>{{todayDate | date:'d/M/y'}}</p>
+<h1>Decimal Pipe!</h1>
+<b>{{dec | number: '3.2-2'}}</b>
+<h3>Json Pipe</h3>
+<b>{{jsonval | json}}</b>
+<h3>Percent pipe</h3>
+<b>{{0.5666 | percent}}</b>
+<h2>Slice pipe</h2>
+<b>{{months | slice:2:6}}</b>
+<h1>Custom pipe</h1>
+<b>{{25 | sqrt}}</b>
+</div>
+
+<router-outlet></router-outlet>
